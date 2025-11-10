@@ -225,3 +225,159 @@ main {
     margin-bottom: 0;
     color: var(--color-primary-dark);
 }
+
+/* ======================================= */
+/* 6. ESTILOS DE COMPONENTES ESPECÍFICOS E FOOTER */
+/* ======================================= */
+
+/* Hero Section (index.html) */
+.hero-section {
+    /* Aplica a cor de fundo clara e a cor da fonte, usando variáveis */
+    background-color: var(--color-primary-light);
+    color: var(--color-neutral-dark);
+    padding: var(--spacing-6) 0; /* 64px */
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-3);
+}
+
+.hero-section p {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-4) auto;
+}
+
+.hero-section .hero-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: var(--spacing-1);
+    margin-top: var(--spacing-4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Missão, Visão, Valores (MVV) - Layout Flexbox */
+.institucional-mvv {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    padding: var(--spacing-5) 0;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+}
+
+.institucional-mvv article {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--color-white);
+    padding: var(--spacing-4);
+    /* Adiciona a cor primária como destaque lateral */
+    border-left: 3px solid var(--color-primary-base); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.institucional-mvv h3 {
+    color: var(--color-primary-base);
+    margin-bottom: var(--spacing-1);
+}
+
+
+/* ======================================= */
+/* 7. ESTILOS DO FORMULÁRIO (cadastro.html) */
+/* ======================================= */
+
+.formulario-cadastro {
+    max-width: 800px;
+    margin: var(--spacing-5) auto;
+    padding: var(--spacing-4);
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.formulario-cadastro h2 {
+    border-bottom: 2px solid var(--color-neutral-light);
+    padding-bottom: var(--spacing-2);
+    margin-top: var(--spacing-4);
+    color: var(--color-primary-dark);
+}
+
+.formulario-cadastro fieldset {
+    border: 1px solid var(--color-neutral-light);
+    padding: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
+    border-radius: 6px;
+    /* Usa CSS Grid para o layout de 2 colunas */
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: var(--spacing-3);
+}
+
+.formulario-cadastro legend {
+    font-weight: bold;
+    color: var(--color-primary-base);
+    padding: 0 var(--spacing-1);
+    font-size: var(--font-size-base);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--color-neutral-dark);
+}
+
+.input-group input {
+    padding: var(--spacing-2);
+    border: 1px solid var(--color-neutral-light);
+    border-radius: 4px;
+    font-size: var(--font-size-base);
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--color-primary-base);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-base-rgb), 0.2);
+}
+
+/* ======================================= */
+/* 8. ESTILOS DO RODAPÉ (FOOTER) */
+/* ======================================= */
+footer {
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-light);
+    padding: var(--spacing-3) 0;
+    text-align: center;
+    /* Adiciona a cor primária como uma linha de destaque no topo */
+    border-top: 5px solid var(--color-primary-base);
+}
+
+footer a {
+    color: var(--color-secondary-base);
+}
+
+footer a:hover {
+    color: var(--color-secondary-light);
+}
+
+/* Responsividade específica para o formulário (adicionada no responsive.css) */
+/* NOTA: Certifique-se de adicionar isso ao seu responsive.css para completar a estilização */
+@media (max-width: 600px) {
+    .formulario-cadastro fieldset {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .institucional-mvv article {
+        min-width: 100%;
+    }
+}
