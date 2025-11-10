@@ -66,8 +66,11 @@ h3 {
 header {
     background-color: var(--color-white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* O header deve ter largura total, mas o nav vai centralizar */
-    padding: var(--spacing-2) 0; /* 16px de padding vertical */
+    /* Centraliza o conteúdo (o nav) dentro do header */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-2) 0;
 }
 
 /* Utiliza Flexbox para alinhar logo e navegação */
@@ -89,19 +92,8 @@ header {
 /* Navegação Principal (Flexbox) */
 .main-nav ul {
     display: flex;
+    list-style: none; /* Garante que os pontos sumam */
     gap: var(--spacing-3); /* 24px de espaço entre os itens */
-}
-
-.main-nav a {
-    color: var(--color-neutral-dark);
-    font-size: var(--font-size-lg);
-    padding: var(--spacing-1) 0;
-    transition: all 0.3s;
-}
-
-.main-nav a:hover {
-    color: var(--color-primary-base);
-    border-bottom: 2px solid var(--color-primary-base); /* Efeito visual no hover */
 }
 
 /* =========================== */
@@ -266,10 +258,15 @@ main {
     padding: var(--spacing-5) 0;
     max-width: 1200px;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza a seção MVV */
     flex-wrap: wrap; 
 }
 
+.institucional-mvv article {
+    flex: 1;
+    min-width: 250px;
+    /* ... (mantenha o restante da estilização de cores e padding) ... */
+}
 .institucional-mvv article {
     flex: 1;
     min-width: 250px;
