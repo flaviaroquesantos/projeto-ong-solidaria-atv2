@@ -424,3 +424,20 @@ main h2 {
     /* Permite que o texto quebre normalmente, mas garante a largura do elemento */
     white-space: normal; 
 }
+
+/* CORREÇÃO FORÇADA DE LAYOUT PARA TÍTULOS DE PÁGINA */
+/* Aplica-se a H2s que podem estar sendo espremidos por um Flexbox/Grid */
+main h2 {
+    /* Força o elemento H2 a ser um bloco de largura total */
+    display: block; 
+    width: 100%;
+    /* Garante que ele use a largura máxima do seu pai */
+    max-width: 100%;
+    /* Alinha o texto ao centro se for o caso do título */
+    text-align: center;
+}
+
+/* Se for o caso de o título estar dentro de um container específico */
+.container h2 {
+    text-align: center;
+}
