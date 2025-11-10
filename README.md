@@ -43,7 +43,7 @@ Para visualizar e trabalhar com este projeto em seu ambiente local, siga os pass
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [https://github.com/flaviaroquesantos/projeto-ong-solidaria-atv2.git]
+    git clone https://github.com/flaviaroquesantos/projeto-ong-solidaria-atv2.git
     ```
 2.  **Navegue até a Pasta:**
     ```bash
