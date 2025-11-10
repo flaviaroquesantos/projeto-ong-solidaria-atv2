@@ -1,56 +1,56 @@
-📄 README.md: Projeto ONG Solidária
-🌟 Nome do Projeto
-Impacta+ | ONG Solidária
+# 💜 Projeto ONG Solidária - Impacta+ | Atividade 2
 
-💻 Tecnologias Utilizadas
-O projeto é um site estático e responsivo desenvolvido utilizando as seguintes tecnologias:
+Este repositório contém o código-fonte desenvolvido para a **Atividade Prática 2 (Desenvolvimento Web e UI/UX)**, com foco na aplicação de conceitos avançados de HTML e CSS, incluindo a utilização de variáveis CSS e layouts responsivos baseados em Flexbox e Grid.
 
-HTML5: Estrutura e semântica do conteúdo.
+---
 
-CSS3: Estilização e layout (incluindo style.css e responsive.css).
+## 🚀 Status do Projeto e Entrega
 
-JavaScript: Interatividade básica (arquivo main.js).
+| Categoria | Status | Observações |
+| :--- | :--- | :--- |
+| **Requisitos Mínimos** | ✅ Atendido | Todos os requisitos de HTML Semântico, Estrutura e Estilização foram implementados. |
+| **HTML** | ✅ Validado | Estrutura semântica para todas as páginas (`index.html`, `projetos.html`, `cadastro.html`). |
+| **CSS** | ✅ Validado | Estilização utilizando **Variáveis CSS (`variables.css`)**, Flexbox (Header, MVV) e Grid (Página de Projetos). |
+| **Responsividade** | ✅ Validado | Layout adaptativo para diferentes tamanhos de tela (`responsive.css`). |
+| **Correções Finais**| ✅ Concluído | Ajustes finos de layout (posição de botões e quebra de linha de títulos) implementados. |
 
-Git & GitHub: Controle de versão e hospedagem.
+### 🌐 Link para Acesso (GitHub Pages)
 
-📁 Estrutura do Projeto
-A estrutura de pastas segue as melhores práticas para organização e manutenção:
+Acesse a versão final do projeto publicada através do GitHub Pages:
 
-PROJETO-ONG-SOLIDARIA/
-├── assets/
-│   ├── css/
-│   │   ├── responsive.css
-│   │   └── style.css
-│   ├── img/  (Contém todas as imagens e ícones do site)
-│   └── js/
-│       └── main.js
-├── cadastro.html
-├── index.html
-└── projetos.html
-✨ Funcionalidades Implementadas
-O site possui três páginas principais totalmente funcionais no ambiente de desenvolvimento local:
+`[https://flaviaroquesantos.github.io/projeto-ong-solidaria-atv2/]`
 
-Página Inicial (index.html): Apresenta a missão, trajetória e conquistas da ONG.
+---
 
-Projetos (projetos.html): Detalha os projetos e as formas de auxílio.
+## 💡 Requisitos da Atividade Implementados
 
-Junte-se a Nós! (cadastro.html): Contém formulários de cadastro para voluntários e um formulário para doações, com campos radio button e campos de texto.
+Os seguintes requisitos chave da Atividade 2 foram aplicados:
 
-✅ Validação do Código
-O código HTML foi validado (Nu Html Checker) e os erros de validação foram corrigidos antes da entrega final:
+1.  **Estrutura de Arquivos:** Organização do projeto com pastas `assets/css` (para estilos), `assets/img` (para imagens) e arquivos HTML na raiz.
+2.  **Variáveis CSS:** Utilização do arquivo `variables.css` para definir cores, espaçamentos (`spacing-X`) e fontes, garantindo fácil manutenção e consistência.
+3.  **Layout Avançado (CSS):**
+    * **Header e Navegação:** Layout utilizando **Flexbox** para alinhar logo e links de navegação.
+    * **Seção MVV (Início):** Implementação de **Flexbox** para alinhar as três colunas (Missão, Visão e Valores).
+    * **Página de Projetos (`projetos.html`):** Utilização de **CSS Grid** para organizar a lista de projetos e a barra lateral de filtros (Grid de 12 colunas).
+4.  **Acessibilidade e Semântica:** Uso de tags HTML semânticas (`<header>`, `<main>`, `<footer>`, `<section>`, `<article>`, `<aside>`, `<figure>`), além de atributos `alt` nas imagens e `accesskey` em links.
+5.  **Formulários:** Implementação de formulários funcionais na página de cadastro e seção de doações, utilizando `fieldset`, `legend` e diferentes tipos de input.
 
-Correção no Formulário: Removidos IDs duplicados e tags <label> redundantes na seção de doação, garantindo a acessibilidade e validação do <fieldset>.
+---
 
-⚠️ Observação Técnica Crítica sobre o Deploy (GitHub Pages)
-O link público do projeto no GitHub Pages apresenta falhas visuais (menu quebrado e imagens faltando), mas o código-fonte está funcional.
+## ⚙️ Como Executar Localmente
 
-Causa do Problema: A falha é de origem técnica no ambiente de hospedagem do GitHub Pages e não um erro de programação HTML/CSS:
+Para visualizar e trabalhar com este projeto em seu ambiente local, siga os passos abaixo:
 
-Falha de Build: O GitHub Actions gerou um erro crítico de build (o "X" vermelho) devido a uma configuração acidental de submódulo Git (No url found for submodule path...).
+1.  **Clone o Repositório:**
+    ```bash
+    git clone [https://github.com/flaviaroquesantos/projeto-ong-solidaria-atv2.git]
+    ```
+2.  **Navegue até a Pasta:**
+    ```bash
+    cd projeto-ong-solidaria-atv2
+    ```
+3.  **Abrir no Navegador:**
+    Abra o arquivo `index.html` diretamente no seu navegador ou utilize a extensão **Live Server** no VS Code para iniciar um servidor local.
 
-Impacto no Site: Mesmo após a limpeza do Git local, esta falha de build persiste no servidor, impedindo que o GitHub Pages encontre os arquivos estáticos (CSS e Imagens), resultando em erros 404 (Not Found) no console.
-
-Conclusão: O código (HTML, CSS, JS) está completo e funcional e deve ser avaliado com base nos arquivos no repositório. O problema de exibição no link público é uma falha de infraestrutura do GitHub Pages.
-
-🔗 Link do Repositório
-https://docs.github.com/pt/repositories/creating-and-managing-repositories/quickstart-for-repositories
+---
+`Desenvolvido por Flávia Roque como parte da disciplina de ADS.`
