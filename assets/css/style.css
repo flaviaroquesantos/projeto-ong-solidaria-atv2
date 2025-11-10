@@ -86,7 +86,7 @@ header {
 }
 
 .main-nav img {
-    height: 60px; /* Tamanho do logo */
+    height: 120px; /* Tamanho do logo */
 }
 
 /* Navegação Principal (Flexbox) */
@@ -185,21 +185,26 @@ main {
 .cta-button {
     display: inline-block;
     background-color: var(--color-primary-base);
-    color: var(--color-white); /* Garante que o texto seja branco */
-    padding: var(--spacing-3) var(--spacing-4); /* Aumenta o padding para ficar maior */
+    color: var(--color-white);
+    padding: var(--spacing-3) var(--spacing-4); /* Aumenta o tamanho do botão */
     border-radius: 4px;
-    font-size: var(--font-size-lg); /* Mantém o tamanho da fonte */
+    font-size: var(--font-size-lg);
     text-align: center;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
-    margin-top: var(--spacing-4); /* Aumenta a margem superior */
+    
+    /* CORREÇÕES FINAIS DE MARGEM: */
+    margin-top: var(--spacing-4);    /* Espaçamento superior */
+    margin-bottom: var(--spacing-4); /* Espaçamento inferior (para separar da imagem) */
 }
 
 .cta-button:hover {
     background-color: var(--color-primary-dark);
-    transform: translateY(-2px); /* Efeito de elevação sutil (hover) */
+    transform: translateY(-2px); 
 }
+
+/* ... o restante dos estilos (oportunidade-item, etc.) vai abaixo ... */
 
 /* Estilização para as oportunidades de voluntariado (Flexbox) */
 .oportunidade-item {
@@ -243,10 +248,15 @@ main {
 
 .hero-section .hero-image {
     width: 100%;
-    max-width: 800px; /* Reduz a largura máxima da imagem */
+    max-width: 800px; 
     height: auto;
     border-radius: var(--spacing-1);
-    margin-top: var(--spacing-4);
+    /* Removendo a margem superior (pois o botão já dará o espaço) */
+    margin-top: 0; 
+    
+    /* ADICIONE ESTA MARGEM SUPERIOR: */
+    margin-top: var(--spacing-4); /* Volta a margem de 32px para o topo da imagem */
+    
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
