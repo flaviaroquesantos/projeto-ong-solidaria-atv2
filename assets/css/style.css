@@ -183,10 +183,10 @@ main {
 /* =========================== */
 
 .cta-button {
-    display: inline-block;
+    display: block; /* Mude de inline-block para block para aceitar margens auto */
     background-color: var(--color-primary-base);
     color: var(--color-white);
-    padding: var(--spacing-3) var(--spacing-4); /* Aumenta o tamanho do botão */
+    padding: var(--spacing-3) var(--spacing-4);
     border-radius: 4px;
     font-size: var(--font-size-lg);
     text-align: center;
@@ -194,9 +194,13 @@ main {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     
-    /* CORREÇÕES FINAIS DE MARGEM: */
-    margin-top: var(--spacing-4);    /* Espaçamento superior */
-    margin-bottom: var(--spacing-4); /* Espaçamento inferior (para separar da imagem) */
+    /* Centraliza o botão (como ele é 'display: block', as margens auto funcionam) */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; /* Faz com que o botão não ocupe 100% da largura */
+    
+    /* ESPAÇAMENTO: Cria a separação da imagem acima */
+    margin-top: var(--spacing-5); /* 48px de espaço */
 }
 
 .cta-button:hover {
@@ -258,11 +262,10 @@ main {
     max-width: 800px; 
     height: auto;
     border-radius: var(--spacing-1);
-    /* Removendo a margem superior (pois o botão já dará o espaço) */
-    margin-top: 0; 
     
-    /* ADICIONE ESTA MARGEM SUPERIOR: */
-    margin-top: var(--spacing-4); /* Volta a margem de 32px para o topo da imagem */
+    /* Define o espaçamento vertical para zero ou mínimo, pois o botão vai dar o espaço */
+    margin-top: var(--spacing-4); 
+    margin-bottom: 0;
     
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -412,4 +415,12 @@ footer a:hover {
     .institucional-mvv article {
         min-width: 100%;
     }
+}
+
+/* CORREÇÃO PARA FORÇAR TÍTULOS LONGOS A NÃO QUEBRAR */
+main h2 {
+    /* Garante que o H2 dentro do MAIN ocupe a largura total de seu pai */
+    width: 100%;
+    /* Permite que o texto quebre normalmente, mas garante a largura do elemento */
+    white-space: normal; 
 }
