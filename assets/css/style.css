@@ -1,0 +1,227 @@
+/* Importa o arquivo de variáveis de design system */
+@import url('variables.css'); 
+
+/* =========================== */
+/* 1. ESTILOS GLOBAIS E RESET */
+/* =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Aplica a cor de fundo clara e a fonte base definidas nas variáveis */
+    background-color: var(--color-neutral-light); 
+    color: var(--color-neutral-dark);
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+/* Garante que o conteúdo principal (main) centralize */
+.container {
+    max-width: 1200px; /* Largura máxima comum para sites */
+    width: 90%;
+    margin: 0 auto;
+    padding: var(--spacing-4) 0; /* 32px de padding vertical */
+}
+
+/* Estilos básicos para links e listas */
+a {
+    color: var(--color-primary-base);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Estilos de Tipografia Hierárquica */
+h1 {
+    font-size: var(--font-size-h1);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-3); /* 24px */
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-2); /* 16px */
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-1); /* 8px */
+}
+
+
+/* =========================== */
+/* 2. LAYOUT DO CABEÇALHO (HEADER) */
+/* =========================== */
+header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* O header deve ter largura total, mas o nav vai centralizar */
+    padding: var(--spacing-2) 0; /* 16px de padding vertical */
+}
+
+/* Utiliza Flexbox para alinhar logo e navegação */
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center; /* Alinha verticalmente */
+    
+    /* Centraliza o conteúdo (igual ao .container) */
+    max-width: 1200px; 
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-nav img {
+    height: 40px; /* Tamanho do logo */
+}
+
+/* Navegação Principal (Flexbox) */
+.main-nav ul {
+    display: flex;
+    gap: var(--spacing-3); /* 24px de espaço entre os itens */
+}
+
+.main-nav a {
+    color: var(--color-neutral-dark);
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-1) 0;
+    transition: all 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--color-primary-base);
+    border-bottom: 2px solid var(--color-primary-base); /* Efeito visual no hover */
+}
+
+/* =========================== */
+/* 3. LAYOUT PRINCIPAL E GRID */
+/* =========================== */
+
+main {
+    padding: var(--spacing-5) var(--spacing-2); /* 48px vertical, 16px horizontal */
+    /* Garante que o conteúdo principal use toda a área, mas com margem para responsividade */
+}
+
+/* Títulos de Seção */
+.page-title, .oportunidades-voluntario, .captacao-recursos {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto var(--spacing-5) auto; /* Centraliza e adiciona 48px de margem inferior */
+}
+
+/* Aplicando o CSS GRID para a Lista de Projetos */
+#projetos-sociais {
+    /* Centraliza o container principal */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Onde a mágica do Grid acontece: Cria a estrutura de 12 colunas */
+.project-list {
+    display: grid;
+    /* 12 colunas de grid para a responsividade (exigência da Entrega 2) */
+    grid-template-columns: repeat(12, 1fr); 
+    gap: var(--spacing-4); /* 32px de espaço entre os itens */
+    margin-top: var(--spacing-4);
+}
+
+/* 4. Estilos dos Cards de Projetos (Artigos) e Aside (Filtro) */
+
+/* Os artigos de projeto (cards) ocupam 8 das 12 colunas na visualização Desktop */
+.projeto-item {
+    /* Ocupa 8 colunas e se alinha com a primeira coluna */
+    grid-column: 1 / span 8; 
+    
+    background-color: var(--color-white);
+    padding: var(--spacing-4);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: var(--spacing-4); /* Espaçamento entre os cards */
+    
+    /* Utiliza Flexbox para organizar o conteúdo dentro do card */
+    display: flex;
+    flex-direction: column;
+}
+
+/* O filtro lateral (aside) ocupa 4 das 12 colunas */
+.categorias-projeto {
+    /* Ocupa da coluna 9 até o final (coluna 13) */
+    grid-column: 9 / span 4; 
+    
+    background-color: var(--color-neutral-light);
+    padding: var(--spacing-4);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.categorias-projeto ul {
+    margin-top: var(--spacing-2);
+}
+
+.categorias-projeto li {
+    padding: var(--spacing-1) 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Estilo para a imagem dentro do card */
+.projeto-item figure {
+    margin-top: var(--spacing-2);
+}
+
+.projeto-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* =========================== */
+/* 5. ESTILOS DE BOTÕES E CTAS */
+/* =========================== */
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary-base);
+    color: var(--color-white);
+    padding: var(--spacing-2) var(--spacing-3); /* 16px por 24px */
+    border-radius: 4px;
+    font-size: var(--font-size-lg);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: var(--spacing-2);
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px); /* Efeito de elevação sutil (hover) */
+}
+
+/* Estilização para as oportunidades de voluntariado (Flexbox) */
+.oportunidade-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-3);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: var(--spacing-2);
+    background-color: var(--color-white);
+}
+
+.oportunidade-item h4 {
+    margin-bottom: 0;
+    color: var(--color-primary-dark);
+}
