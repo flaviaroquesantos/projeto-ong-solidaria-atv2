@@ -206,6 +206,13 @@ main {
 
 /* ... o restante dos estilos (oportunidade-item, etc.) vai abaixo ... */
 
+.cta-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px); 
+}
+
+/* ... o restante dos estilos (oportunidade-item, etc.) vai abaixo ... */
+
 /* Estilização para as oportunidades de voluntariado (Flexbox) */
 .oportunidade-item {
     display: flex;
@@ -293,6 +300,24 @@ main {
     margin-bottom: var(--spacing-1);
 }
 
+/* Estilos para a seção Nossa Trajetória e Conquistas */
+.historico {
+    padding: var(--spacing-5) 0; /* Espaçamento vertical */
+    text-align: center; /* Centraliza o texto e a imagem */
+}
+
+.historico figure {
+    /* Limita o container da imagem para centralizá-la e reduzir seu tamanho */
+    max-width: 600px; /* Você pode mudar esse valor (600px, 700px, etc.) */
+    margin: var(--spacing-4) auto; /* Centraliza o bloco da figura */
+}
+
+.historico figure img {
+    /* Garante que a imagem se ajuste ao limite de 600px da figure */
+    width: 100%;
+    height: auto;
+    border-radius: var(--spacing-1);
+}
 
 /* ======================================= */
 /* 7. ESTILOS DO FORMULÁRIO (cadastro.html) */
