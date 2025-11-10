@@ -52,6 +52,7 @@ h1 {
 h2 {
     font-size: var(--font-size-h2);
     margin-bottom: var(--spacing-2); /* 16px */
+    /* Remova qualquer "width: X%" ou "max-width" aqui, se houver */
 }
 
 h3 {

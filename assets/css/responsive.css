@@ -119,3 +119,16 @@
         font-size: var(--font-size-lg); /* 20px */
     }
 }
+
+/* CORREÇÃO PARA TÍTULOS GRANDES NÃO QUEBRAREM EM MÚLTIPLAS LINHAS DESNECESSÁRIAS */
+@media (max-width: 768px) {
+    /* Força o H2 a ocupar a largura total do seu pai, corrigindo o problema da coluna espremida */
+    main h2 {
+        display: block; 
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        /* Reduz ligeiramente o tamanho da fonte apenas no mobile/tablet se ainda estiver quebrando */
+        font-size: 2rem; 
+    }
+}
